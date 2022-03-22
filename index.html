@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Taller_3</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    </head>
+    <body>
+
+        
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary
+                fixed-top  "  >
+                <div class="container">
+
+                    <a class="navbar-brand  text-light" href="#inicio"> <i class="bi bi-person-video3"></i></i>Derechos
+                        de autor</a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0  text-light">
+                            <li class="nav-item ">
+                                <a class="nav-link active fw-bold text-light"
+                                    href="#ejercicio_1">Ejercicio_1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fw-bold text-light"
+                                    href="#ejercicio_2">Ejercicio_2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fw-bold text-light"
+                                    href="#ejercicio_3">Ejercicio_3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fw-bold text-light"
+                                    href="#ejercicio_4">Ejercicio_4</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+        <div id="ejercicio_1" class="container py-5">
+            <div class="py-5">
+                <div class="col-12 text-black">
+
+                    <div class="form-group">
+                        <div class="bg-primary text-white text-center">
+                            <h2>Calcula tu IMC</h2>
+                        </div>
+                        <div>
+
+                            <h5>Genero</h5>
+                            <input id="masculion" name="genero" type="radio">
+                            <label for="masculino">Másculino</label>
+
+                            <input id="femenino" name="genero" type="radio">
+                            <label for="femenino">Femenino</label>
+                        </div><br>
+
+                        <label for="num1" class="h5">peso</label>
+                        <input id="peso" class="form-control" name="peso"
+                            type="number" placeholder="Ingrese su peso en Kg">
+                        <label for="num1" class="h5">Estatura</label>
+                        <input id="estatura" class="form-control"
+                            name="estatura"
+                            type="number" placeholder="Ingrese su estatura en metros">
+
+                        <div>
+
+                            <button onclick="imc()" type="button" class="btn
+                                btn-warning  my-3">Calcular</button>
+
+                        </div>
+
+
+
+                        <label for="resultado">Resultado</label>
+                        <input id="resultado" class="form-control"
+                            name="resultado" type="number" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEGUNDO EJERCICIO    -->
+
+        <div id="ejercicio_2" class="container">
+
+
+            <div class="form-group">
+                <div class="col-12 bg-primary text-center text-white">
+                    <h2>Simulador de conversion a pesos colombianos</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <img
+                            src="https://s03.s3c.es/imag/_v0/1085x613/c/1/8/dolares.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Moneda Dolares</h5>
+                            <input type="number" id="dolares">
+
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">A pesos colombianos</h5>
+                            <input id="pesos" type="number" disabled>
+                        </div>
+
+                    </div>
+
+                    <button onclick="cambioM()" type="button" class="btn
+                        btn-warning  my-2   ">Cambio a Pesos</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <img
+                            src="https://miracomosehace.com/wp-content/uploads/mch/mujer-contando-euros-efectivo_10230.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Moneda Euros</h5>
+                            <input type="number" id="euros">
+
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> A pesos colombianos</h5>
+                            <input id="pesos2" type="number" disabled>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TERCER EJERCICIO    -->
+
+        <div id="ejercicio_3" class="container">
+
+            <!-- AQUI SE CAPTURA LA INFORMACION POR LOS INPUT -->
+
+            <div class="form-group">
+                <!-- <h1>Captura informacion clientes</h1> -->
+
+                <div class="col-12 mt-5 bg-primary text-center text-white">
+                    <h2>Captura informacion clientes</h2>
+                </div>
+
+
+                <input class="form-control mb-2" id="nombre" type="text"
+                    placeholder="nombre">
+                <input class="form-control mb-2" id="apellido" type="text"
+                    placeholder="apellido">
+                <input class="form-control mb-2" id="edad" type="number"
+                    placeholder="edad">
+                <input class="form-control mb-2" id="vacunado" type=""
+                    placeholder="vacunado (si) o (no)">
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Vacunado</th>
+
+                    </tr>
+                </thead>
+
+                <!-- OJO  En esta parte es donde se llena la tabla -->
+                <tbody id='tab'>
+
+
+                </tbody>
+            </table>
+
+            <!-- AQUI DE INVOCA LA FUNCION CON EL CLICK -->
+            <button onclick="clientes()" type="button" class="btn btn-warning">
+                Registrar</button>
+        </div>
+
+        <!-- CUARTO EJERCICIO    -->
+
+
+        <div id="ejercicio_4" class="container">
+
+            <div id="planes" class="bg-secondary text-light mt-4 text-center">
+                <h2>Nuestros nuevo extrenos</h2>
+                <p class="lead"> Te presentamos las peliculas que han cautivado
+                    miles de cineastas en todo el mundo
+                    .</p>
+
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-5">
+                        <div class="card">
+                            <img
+                                src="https://static1.mujerhoy.com/www/multimedia/201804/11/media/cortadas/peliculas-dia-de-la-madre-brave.jpg"
+                                class="card-img-top" alt="pelicula"
+                                height="350px" width="180px">
+                            <div class="card-body">
+                                <h5 class="card-title text-black">$5000</h5>
+                                <p class="card-text text-black"> Pelicula para
+                                    tus hijos.
+                                </p>
+
+
+                                <button type="button" class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Comprar
+                                </button>
+
+
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-5">
+                        <div class="card">
+                            <img
+                                src="https://es.web.img2.acsta.net/c_310_420/pictures/22/01/13/15/49/5165456.jpg"
+                                class="card-img-top" alt="pelicula"
+                                height="350px" width="180px">
+                            <div class="card-body">
+                                <h5 class="card-title text-black">$5000</h5>
+                                <p class="card-text text-black">Peliculas de
+                                    aventura para toda la familia.</p>
+                                <button type="button" class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Comprar
+                                </button>
+                                <!-- <a href="#" class="btn btn-primary">click</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-5">
+                        <div class="card">
+
+                            <img
+                                src="https://stylelovely.com/wp-content/uploads/2020/04/proyecto-rampagne-peliculas-mas-vistas-durante-la-cuarentena.jpg"
+                                class="card-img-top" alt="pelicula"
+                                height="350px" width="180px">
+                            <div class="card-body">
+                                <h5 class="card-title text-black">$5000</h5>
+                                <p class="card-text text-black">Peliculas para
+                                    compartir con toda la familia.</p>
+
+                                <button type="button" class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Comprar </button>
+
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="container-fluid bg-primary py-5 text-center
+                text-light fs-3 fw-bolder">
+                <p>Todos los derechos reservados</p>
+                <p>Walter Castro Rojas</p>
+            </footer>
+
+            <!-- MODAL -1-->
+            <div class="modal fade" id="exampleModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-danger"
+                                id="exampleModalLabel">Buena decision</h5>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form>
+                                <label for="" class="text-success">Cantidad</label>
+                                <input id="cantidad" type="number">
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Cerrar</button>
+
+                            <button onclick="calcular()" type="button"
+                                class="btn btn-primary">Comprar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <script src="./script.js"></script>
+            <script src="./js/bootstrap.min.js"></script>
+
+
+
+        </body>
+    </html>
